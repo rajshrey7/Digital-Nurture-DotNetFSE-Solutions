@@ -3,17 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Invite</title>
+    <title>Community Event Video Invite</title>
 
     <style>
+
         body{
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             text-align: center;
             margin: 30px;
         }
 
+        .container{
+            width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1{
+            color: #333;
+        }
+
         video{
-            border: 2px solid black;
+            border: 3px solid #333;
             border-radius: 10px;
         }
 
@@ -21,53 +36,73 @@
             color: green;
             font-weight: bold;
             margin-top: 15px;
+            font-size: 18px;
         }
 
         textarea{
-            width: 400px;
-            height: 100px;
-            margin-top: 20px;
+            width: 90%;
+            height: 120px;
             padding: 10px;
+            margin-top: 15px;
+            resize: none;
         }
+
+        .note{
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
     </style>
 
     <script>
 
         function videoReady(){
+
             document.getElementById("status").innerHTML =
-                "✅ Video ready to play";
+                "✅ Video is ready to play";
+
         }
 
         window.onbeforeunload = function(){
-            return "You have unsaved changes. Are you sure you want to leave?";
+
+            return "You have unsaved changes. Are you sure you want to leave this page?";
+
         };
 
     </script>
 
 </head>
+
 <body>
 
-    <h1>Community Event Promo Video</h1>
+    <div class="container">
 
-    <video
-        width="600"
-        controls
-        oncanplay="videoReady()">
+        <h1>Community Event Promo Video</h1>
 
-        <source
-            src="https://www.w3schools.com/html/mov_bbb.mp4"
-            type="video/mp4">
+        <video
+            width="700"
+            controls
+            oncanplay="videoReady()">
 
-        Your browser does not support video.
-    </video>
+            <source
+                src="media/promo-video.mp4"
+                type="video/mp4">
 
-    <p id="status"></p>
+            Your browser does not support the video tag.
 
-    <h3>Event Notes</h3>
+        </video>
 
-    <textarea
-        placeholder="Type something before leaving the page...">
-    </textarea>
+        <p id="status"></p>
+
+        <p class="note">
+            Event Notes
+        </p>
+
+        <textarea
+            placeholder="Type your notes here before leaving the page...">
+        </textarea>
+
+    </div>
 
 </body>
 </html>
