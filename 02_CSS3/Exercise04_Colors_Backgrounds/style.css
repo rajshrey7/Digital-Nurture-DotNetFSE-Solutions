@@ -1,0 +1,82 @@
+/* Body Background */
+
+body{
+    font-family: Arial, sans-serif;
+
+    /* Fallback Color */
+    background-color: #dfe6e9;
+
+    /* Background Image */
+    background-image: url("images/city-background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    margin: 0;
+}
+
+/* Gradient Header */
+
+header{
+    background: linear-gradient(
+        to right,
+        #0066cc,
+        #00ccff
+    );
+
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* Section Styling */
+
+.content{
+    width: 80%;
+    margin: 30px auto;
+
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.85
+    );
+
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* HEX Color */
+
+h2{
+    color: #2d3436;
+}
+
+/* RGBA Color */
+
+p{
+    color: rgba(
+        0,
+        0,
+        0,
+        0.8
+    );
+
+    font-size: 18px;
+}
+
+/* Event Card */
+
+.event-card{
+    margin-top: 20px;
+    padding: 15px;
+
+    background-color: rgba(
+        0,
+        123,
+        255,
+        0.2
+    );
+
+    border-left: 5px solid #007BFF;
+}
