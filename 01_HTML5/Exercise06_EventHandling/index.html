@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .container{
+            width: 600px;
+            margin: auto;
+        }
+
+        label{
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button{
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        img{
+            width: 250px;
+            border: 2px solid black;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #feeDisplay{
+            color: blue;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        #charCount{
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+
+        function validatePhone(){
+            let phone = document.getElementById("phone").value;
+
+            if(phone.length !== 10 || isNaN(phone)){
+                alert("Please enter a valid 10-digit phone number");
+            }
+        }
+
+        function showFee(){
+            let eventType = document.getElementById("eventType").value;
+            let fee = "";
+
+            switch(eventType){
+                case "Music Festival":
+                    fee = "₹500";
+                    break;
+
+                case "Food Fair":
+                    fee = "₹300";
+                    break;
+
+                case "Marathon":
+                    fee = "₹700";
+                    break;
+
+                case "Book Exhibition":
+                    fee = "₹200";
+                    break;
+
+                default:
+                    fee = "";
+            }
+
+            document.getElementById("feeDisplay").innerHTML =
+                "Event Fee: " + fee;
+        }
+
+        function submitFeedback(){
+            alert("Feedback Submitted Successfully!");
+        }
+
+        function enlargeImage(img){
+            if(img.style.width === "400px"){
+                img.style.width = "250px";
+            }
+            else{
+                img.style.width = "400px";
+            }
+        }
+
+        function countCharacters(){
+            let text =
+                document.getElementById("feedback").value;
+
+            document.getElementById("charCount").innerHTML =
+                "Characters Typed: " + text.length;
+        }
+
+    </script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Community Event Feedback</h2>
+
+    <label>Phone Number</label>
+    <input
+        type="text"
+        id="phone"
+        onblur="validatePhone()"
+        placeholder="Enter 10-digit number">
+
+    <label>Select Event</label>
+    <select
+        id="eventType"
+        onchange="showFee()">
+
+        <option value="">
+            Select Event
+        </option>
+
+        <option>
+            Music Festival
+        </option>
+
+        <option>
+            Food Fair
+        </option>
+
+        <option>
+            Marathon
+        </option>
+
+        <option>
+            Book Exhibition
+        </option>
+
+    </select>
+
+    <p id="feeDisplay"></p>
+
+    <h3>Double Click Image</h3>
+
+    <img
+        src="https://picsum.photos/250/150"
+        alt="Event"
+        ondblclick="enlargeImage(this)">
+
+    <label>Feedback</label>
+
+    <textarea
+        id="feedback"
+        rows="5"
+        onkeyup="countCharacters()"
+        placeholder="Enter feedback here">
+    </textarea>
+
+    <p id="charCount">
+        Characters Typed: 0
+    </p>
+
+    <button onclick="submitFeedback()">
+        Submit Feedback
+    </button>
+
+</div>
+
+</body>
+</html>
