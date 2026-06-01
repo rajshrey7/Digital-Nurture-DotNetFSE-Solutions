@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container{
+            width: 500px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        label{
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        button{
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        output{
+            display: block;
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        function registerEvent() {
+            document.getElementById("result").value =
+                "Registration Successful!";
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>Community Event Registration</h2>
+
+        <form onsubmit="registerEvent(); return false;">
+
+            <label>Name</label>
+            <input type="text"
+                   placeholder="Enter your name"
+                   required
+                   autofocus>
+
+            <label>Email</label>
+            <input type="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <label>Event Date</label>
+            <input type="date" required>
+
+            <label>Event Type</label>
+            <select required>
+                <option value="">Select Event</option>
+                <option>Music Festival</option>
+                <option>Food Fair</option>
+                <option>Marathon</option>
+                <option>Book Exhibition</option>
+            </select>
+
+            <label>Message</label>
+            <textarea rows="4"
+                      placeholder="Enter your message"></textarea>
+
+            <button type="submit">
+                Register
+            </button>
+
+            <output id="result"></output>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
