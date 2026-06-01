@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        select, button{
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+        }
+
+        #message{
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+
+        function savePreference(){
+
+            let selectedEvent =
+                document.getElementById("eventType").value;
+
+            localStorage.setItem(
+                "preferredEvent",
+                selectedEvent
+            );
+
+            sessionStorage.setItem(
+                "lastVisit",
+                new Date().toLocaleString()
+            );
+
+            document.getElementById("message").innerHTML =
+                "Preference Saved Successfully!";
+        }
+
+        function loadPreference(){
+
+            let savedEvent =
+                localStorage.getItem("preferredEvent");
+
+            if(savedEvent){
+                document.getElementById("eventType").value =
+                    savedEvent;
+            }
+
+            let lastVisit =
+                sessionStorage.getItem("lastVisit");
+
+            if(lastVisit){
+                document.getElementById("visitInfo").innerHTML =
+                    "Last Session: " + lastVisit;
+            }
+        }
+
+        function clearPreferences(){
+
+            localStorage.clear();
+            sessionStorage.clear();
+
+            document.getElementById("eventType").selectedIndex = 0;
+
+            document.getElementById("message").innerHTML =
+                "Preferences Cleared";
+
+            document.getElementById("visitInfo").innerHTML = "";
+        }
+
+        window.onload = loadPreference;
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Event Preference Settings</h1>
+
+    <select id="eventType">
+
+        <option value="">
+            Select Event
+        </option>
+
+        <option value="Music Festival">
+            Music Festival
+        </option>
+
+        <option value="Food Fair">
+            Food Fair
+        </option>
+
+        <option value="Marathon">
+            Marathon
+        </option>
+
+        <option value="Book Exhibition">
+            Book Exhibition
+        </option>
+
+    </select>
+
+    <br>
+
+    <button onclick="savePreference()">
+        Save Preference
+    </button>
+
+    <button onclick="clearPreferences()">
+        Clear Preferences
+    </button>
+
+    <p id="message"></p>
+
+    <p id="visitInfo"></p>
+
+</body>
+</html>
