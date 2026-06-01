@@ -1,0 +1,63 @@
+/* Page Styling */
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Event Card */
+
+.eventCard{
+
+    background-color: white;
+
+    border: 3px solid #007BFF;
+
+    padding: 20px;
+
+    margin: 30px;
+
+    border-radius: 10px;
+}
+
+/* Input Field */
+
+input{
+
+    padding: 10px;
+
+    border: 2px solid gray;
+
+    outline: 3px solid lightblue;
+
+    margin-top: 10px;
+}
+
+/* Visibility Hidden */
+
+.hiddenBox{
+
+    visibility: hidden;
+
+    background-color: yellow;
+
+    padding: 15px;
+
+    margin-top: 20px;
+}
+
+/* Display None */
+
+.noneBox{
+
+    display: none;
+
+    background-color: red;
+
+    color: white;
+
+    padding: 15px;
+
+    margin-top: 20px;
+}
