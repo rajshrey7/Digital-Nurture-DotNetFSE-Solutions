@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging Demo</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #box{
+            width: 250px;
+            margin: auto;
+            padding: 20px;
+            background-color: lightblue;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        Debugging Example
+    </div>
+
+    <button onclick="calculateTotal()">
+        Calculate
+    </button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function calculateTotal(){
+
+            let price = 100;
+            let quantity = 5;
+
+            console.log("Price =", price);
+            console.log("Quantity =", quantity);
+
+            let total = price * quantity;
+
+            document.getElementById("result").innerHTML =
+                "Total Amount = ₹" + total;
+        }
+
+    </script>
+
+</body>
+</html>
