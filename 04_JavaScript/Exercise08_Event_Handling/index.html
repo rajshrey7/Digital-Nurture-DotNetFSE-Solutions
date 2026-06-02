@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:20px;
+        }
+
+        .event-card{
+            border:1px solid #ccc;
+            padding:10px;
+            margin:10px 0;
+            border-radius:8px;
+        }
+
+        input, select{
+            padding:8px;
+            margin:10px 0;
+            width:250px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Community Events</h1>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search event name">
+
+    <br>
+
+    <select id="categoryFilter">
+
+        <option value="All">
+            All Categories
+        </option>
+
+        <option value="Music">
+            Music
+        </option>
+
+        <option value="Food">
+            Food
+        </option>
+
+        <option value="Education">
+            Education
+        </option>
+
+    </select>
+
+    <div id="eventsContainer"></div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
