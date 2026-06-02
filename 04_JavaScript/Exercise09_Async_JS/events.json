@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Music Festival",
+        "category": "Music"
+    },
+    {
+        "name": "Food Fair",
+        "category": "Food"
+    },
+    {
+        "name": "Book Exhibition",
+        "category": "Education"
+    }
+]
