@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:20px;
+        }
+
+        input{
+            padding:8px;
+            width:250px;
+        }
+
+        button{
+            padding:8px 15px;
+            margin:5px;
+        }
+
+        li{
+            margin:5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Community Event List</h1>
+
+    <input
+        type="text"
+        id="eventInput"
+        placeholder="Enter event name">
+
+    <button id="addBtn">
+        Add Event
+    </button>
+
+    <button id="removeBtn">
+        Remove All
+    </button>
+
+    <ul id="eventList"></ul>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
