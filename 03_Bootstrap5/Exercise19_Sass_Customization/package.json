@@ -1,0 +1,25 @@
+{
+  "name": "DN4-DotNetFSE-Assignments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "sass": "^1.100.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajshrey7/Digital-Nurture-DotNetFSE-Solutions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajshrey7/Digital-Nurture-DotNetFSE-Solutions/issues"
+  },
+  "homepage": "https://github.com/rajshrey7/Digital-Nurture-DotNetFSE-Solutions#readme"
+}
