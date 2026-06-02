@@ -1,0 +1,52 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Node modules
+node_modules/
+
+# Coverage
+coverage/
+
+# Generated files
+*.cache
+
+# SQL output files
+*.bak
+*.mdf
+*.ldf
+
+# Publish folders
+publish/
+
+# Test results
+TestResults/
